@@ -462,21 +462,26 @@ last_record AS (
         WHERE epv.templatecode = 'ER_MOH_VISUAL_TRIAGE_TEMPLATE'
     ) t
     WHERE rn = 1
+),
+joined_records AS (
+    SELECT 
+        f.patientpomrid AS visit_id,
+        f.first_covid_score,
+        f.first_mers_score,
+        f.first_createdon,
+        f.first_createdby,
+        f.first_modifiedon,
+        l.last_covid_score,
+        l.last_mers_score,
+        l.last_createdon,
+        l.last_createdby,
+        l.last_modifiedon
+    FROM first_record f
+    JOIN last_record l ON f.patientpomrid = l.patientpomrid
 )
 SELECT 
-    jr.patientpomrid AS visit_id,
-    jr.first_covid_score,
-    jr.first_mers_score,
-    jr.first_createdon,
-    jr.first_createdby,
-    jr.first_modifiedon,
-    jr.last_covid_score,
-    jr.last_mers_score,
-    jr.last_createdon,
-    jr.last_createdby,
-    jr.last_modifiedon
-FROM first_record f
-JOIN last_record l ON f.patientpomrid = l.patientpomrid jr
+    jr.*
+FROM joined_records jr
 WHERE jr.last_modifiedon > TO_TIMESTAMP('${max_updated_time}', 'YYYY-MM-DD HH24:MI:SS.FF7')""",
         "Track COVID-19 and MERS visual triage scores from first to latest assessment"
     )
