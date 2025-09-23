@@ -1027,7 +1027,7 @@ if st.session_state['page'] == 'menu':
     with col1:
         st.markdown("#### 📊 Data Flow Architecture")
         # Replace with your actual image URL
-        st.image("https://your-drive-link/image1.jpg", 
+        st.image("https://github.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/blob/main/er_archr_1.drawio.png", 
                 caption="Data Flow Diagram", 
                 use_column_width=True)
         
