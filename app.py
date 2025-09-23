@@ -1027,31 +1027,50 @@ if st.session_state['page'] == 'menu':
     </div>
     """, unsafe_allow_html=True)
     
-    # Display images in full width for better readability
+    # Image 1 - Data Flow Architecture (Lengthy)
     st.markdown("#### 📊 Data Flow Architecture")
+    st.markdown("""
+    <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 20px 0;">
+    """, unsafe_allow_html=True)
+    
     st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/er_archr_1.drawio.png", 
             caption="Data Flow Diagram - Complete ER Data Architecture", 
             use_column_width=True)
     
-    # Add some space between images
-    st.markdown("---")
+    st.markdown("</div>", unsafe_allow_html=True)
     
+    # Extra space after lengthy image
+    st.markdown("<br><br>", unsafe_allow_html=True)
+    st.markdown("---")
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    # Image 2 - ETL Process Flow (Lengthy)
     st.markdown("#### 🔄 ETL Process Flow")
+    st.markdown("""
+    <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 20px 0;">
+    """, unsafe_allow_html=True)
+    
     st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/er_archi_2drawio.png", 
             caption="ETL Process Architecture - Data Transformation Pipeline", 
             use_column_width=True)
     
-    # Add some space between images
-    st.markdown("---")
+    st.markdown("</div>", unsafe_allow_html=True)
     
+    # Extra space after lengthy image
+    st.markdown("<br><br>", unsafe_allow_html=True)
+    st.markdown("---")
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    # Image 3 - Data Warehouse Schema (Regular)
     st.markdown("#### 🏢 Data Warehouse Schema")
     st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/er_archi_3_drawio.png", 
             caption="DWH Star Schema - Dimensional Model Design", 
             use_column_width=True)
     
-    # Add some space between images
+    # Regular space
     st.markdown("---")
     
+    # Image 4 - Analytics Architecture (Regular)
     st.markdown("#### 📈 Analytics Architecture")
     st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/er_archi_4_.drawio.png", 
             caption="Analytics Layer Architecture - Reporting and Visualization", 
