@@ -1024,12 +1024,12 @@ if st.session_state['page'] == 'menu':
     # Create 2x2 grid for 4 images
     col1, col2 = st.columns(2)
     
-    with col1:
-        st.markdown("#### 📊 Data Flow Architecture")
-        # Replace with your actual image URL
-        st.image("https://github.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/blob/main/er_archr_1.drawio.png", 
-                caption="Data Flow Diagram", 
-                use_column_width=True)
+with col1:
+    st.markdown("#### 📊 Data Flow Architecture")
+    # Correct GitHub raw URL format
+    st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/er_archr_1.drawio.png", 
+            caption="Data Flow Diagram", 
+            use_column_width=True)
         
         st.markdown("#### 🔄 ETL Process Flow")
         # Replace with your actual image URL  
