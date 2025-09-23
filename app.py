@@ -1050,7 +1050,7 @@ if st.session_state['page'] == 'menu':
     <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 20px 0;">
     """, unsafe_allow_html=True)
     
-    st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/er_archi_2drawio.png", 
+    st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/err_archii_2.drawio.png", 
             caption="ETL Process Architecture - Data Transformation Pipeline", 
             use_column_width=True)
     
