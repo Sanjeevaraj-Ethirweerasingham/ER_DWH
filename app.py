@@ -1007,3 +1007,45 @@ is_active       as "is_active",
 is_deleted      as "is_deleted"
 FROM RM_RESOURCEREG.RMRRG_EMPLOYEE epp
 WHERE epp.modified_date > TO_TIMESTAMP('2024-12-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS')""")
+
+# Add this section at the very end of your existing code, after all the page routing
+
+# ETL Architecture Images Section (add this at the end)
+if st.session_state['page'] == 'menu':
+    # ETL Architecture Images
+    st.markdown("---")
+    st.markdown("""
+    <div class="main-header" style="margin-top: 3rem;">
+        <h2>🏗️ ETL Architecture Diagrams</h2>
+        <p>Data Warehouse Architecture and Flow Diagrams</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Create 2x2 grid for 4 images
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("#### 📊 Data Flow Architecture")
+        # Replace with your actual image URL
+        st.image("https://your-drive-link/image1.jpg", 
+                caption="Data Flow Diagram", 
+                use_column_width=True)
+        
+        st.markdown("#### 🔄 ETL Process Flow")
+        # Replace with your actual image URL  
+        st.image("https://your-drive-link/image2.jpg", 
+                caption="ETL Process Architecture", 
+                use_column_width=True)
+    
+    with col2:
+        st.markdown("#### 🏢 Data Warehouse Schema")
+        # Replace with your actual image URL
+        st.image("https://your-drive-link/image3.jpg", 
+                caption="DWH Star Schema", 
+                use_column_width=True)
+        
+        st.markdown("#### 📈 Analytics Architecture")
+        # Replace with your actual image URL
+        st.image("https://your-drive-link/image4.jpg", 
+                caption="Analytics Layer Architecture", 
+                use_column_width=True)
