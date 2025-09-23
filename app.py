@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 st.set_page_config(
     page_title="ER Management Dashboard", 
     layout="wide",
-    initial_sidebar_state="collapsed"
+    initial_sidebar_state="collapsed")
 # ETL Architecture Section
 st.markdown("---")
 st.markdown("### 🏗️ ETL Architecture & Documentation")
@@ -20,7 +20,6 @@ with col2:
     if st.button("📊 Data Flow\n\nView Data Pipeline Flow", key="data_flow"):
         st.session_state['page'] = 'data_flow'
         st.rerun()
-)
 
 # Custom CSS for professional styling
 st.markdown("""
