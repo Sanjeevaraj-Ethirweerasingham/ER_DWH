@@ -6,6 +6,20 @@ st.set_page_config(
     page_title="ER Management Dashboard", 
     layout="wide",
     initial_sidebar_state="collapsed"
+# ETL Architecture Section
+st.markdown("---")
+st.markdown("### 🏗️ ETL Architecture & Documentation")
+col1, col2 = st.columns(2)
+
+with col1:
+    if st.button("📐 ETL Architecture\n\nView Architecture Diagrams", key="etl_architecture"):
+        st.session_state['page'] = 'etl_architecture'
+        st.rerun()
+
+with col2:
+    if st.button("📊 Data Flow\n\nView Data Pipeline Flow", key="data_flow"):
+        st.session_state['page'] = 'data_flow'
+        st.rerun()
 )
 
 # Custom CSS for professional styling
