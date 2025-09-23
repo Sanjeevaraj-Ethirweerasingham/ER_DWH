@@ -1037,7 +1037,7 @@ if st.session_state['page'] == 'menu':
     st.markdown("---")
     
     st.markdown("#### 🔄 ETL Process Flow")
-    st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/image2.png", 
+    st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/er_archi_2drawio.png", 
             caption="ETL Process Architecture - Data Transformation Pipeline", 
             use_column_width=True)
     
@@ -1045,7 +1045,7 @@ if st.session_state['page'] == 'menu':
     st.markdown("---")
     
     st.markdown("#### 🏢 Data Warehouse Schema")
-    st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/image3.png", 
+    st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/er_archi_3_drawio.png", 
             caption="DWH Star Schema - Dimensional Model Design", 
             use_column_width=True)
     
@@ -1053,6 +1053,6 @@ if st.session_state['page'] == 'menu':
     st.markdown("---")
     
     st.markdown("#### 📈 Analytics Architecture")
-    st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/image4.png", 
+    st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/er_archi_4_.drawio.png", 
             caption="Analytics Layer Architecture - Reporting and Visualization", 
             use_column_width=True)
