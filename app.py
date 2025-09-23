@@ -1013,6 +1013,9 @@ WHERE epp.modified_date > TO_TIMESTAMP('2024-12-31 23:59:59', 'YYYY-MM-DD HH24:M
 # Add this section at the very end of your existing code, after the page routing
 # Make sure this is at the same indentation level as your other main sections
 
+# Add this section at the very end of your existing code, after the page routing
+# Make sure this is at the same indentation level as your other main sections
+
 # ETL Architecture Images Section
 if st.session_state['page'] == 'menu':
     # ETL Architecture Images
@@ -1024,27 +1027,32 @@ if st.session_state['page'] == 'menu':
     </div>
     """, unsafe_allow_html=True)
     
-    # Create 2x2 grid for 4 images
-    col1, col2 = st.columns(2)
+    # Display images in full width for better readability
+    st.markdown("#### 📊 Data Flow Architecture")
+    st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/er_archr_1.drawio.png", 
+            caption="Data Flow Diagram - Complete ER Data Architecture", 
+            use_column_width=True)
     
-    with col1:
-        st.markdown("#### 📊 Data Flow Architecture")
-        st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/er_archr_1.drawio.png", 
-                caption="Data Flow Diagram", 
-                use_column_width=True)
-        
-        st.markdown("#### 🔄 ETL Process Flow")
-        st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/image2.png", 
-                caption="ETL Process Architecture", 
-                use_column_width=True)
+    # Add some space between images
+    st.markdown("---")
     
-    with col2:
-        st.markdown("#### 🏢 Data Warehouse Schema")
-        st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/image3.png", 
-                caption="DWH Star Schema", 
-                use_column_width=True)
-        
-        st.markdown("#### 📈 Analytics Architecture")
-        st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/image4.png", 
-                caption="Analytics Layer Architecture", 
-                use_column_width=True)
+    st.markdown("#### 🔄 ETL Process Flow")
+    st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/image2.png", 
+            caption="ETL Process Architecture - Data Transformation Pipeline", 
+            use_column_width=True)
+    
+    # Add some space between images
+    st.markdown("---")
+    
+    st.markdown("#### 🏢 Data Warehouse Schema")
+    st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/image3.png", 
+            caption="DWH Star Schema - Dimensional Model Design", 
+            use_column_width=True)
+    
+    # Add some space between images
+    st.markdown("---")
+    
+    st.markdown("#### 📈 Analytics Architecture")
+    st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/image4.png", 
+            caption="Analytics Layer Architecture - Reporting and Visualization", 
+            use_column_width=True)
