@@ -1033,7 +1033,7 @@ if st.session_state['page'] == 'menu':
     <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 20px 0;">
     """, unsafe_allow_html=True)
     
-    st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/err_arch_1.drawio.png", 
+    st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/er_arch11.drawio.png", 
             caption="Data Flow Diagram - Complete ER Data Architecture", 
             use_column_width=True)
     
