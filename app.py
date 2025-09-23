@@ -1063,7 +1063,7 @@ if st.session_state['page'] == 'menu':
     
     # Image 3 - Data Warehouse Schema (Regular)
     st.markdown("#### 🏢 Data Warehouse Schema")
-    st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/er_archi_3_drawio.png", 
+    st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/err_archi_3drawio.png", 
             caption="DWH Star Schema - Dimensional Model Design", 
             use_column_width=True)
     
