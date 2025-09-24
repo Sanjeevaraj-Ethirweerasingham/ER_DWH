@@ -225,7 +225,7 @@ if st.session_state['page'] == 'menu':
     'Discharge': '#feca57',
     'Journey': '#ffff00',
     'ER Patient\nDetails': '#667eea'
-}
+
 
 # -------------------------------
 # Section 3: Build Process Flow Figure
