@@ -219,8 +219,6 @@ if st.session_state['page'] == 'menu':
 
 
     
-colors = {
-    'Admission': '#ff6b6b',
     'Visual Triage': '#4ecdc4',
     'Main Triage': '#45b7d1',
     'Assignments': '#96ceb4',
@@ -228,8 +226,6 @@ colors = {
     'Journey': '#ffff00',
     'ER Patient\nDetails': '#667eea'
 }
-
-
 
 # -------------------------------
 # Section 3: Build Process Flow Figure
@@ -284,7 +280,7 @@ st.plotly_chart(fig, use_container_width=True)
 
 
     # Third Row: ER Diagnosis
-st.markdown("### 🛤️ Patient Diagnosis")
+    st.markdown("### 🛤️ Patient Diagnosis")
     col_left, col_center, col_right = st.columns([1, 2, 1])
     with col_center:
         if st.button("🛤️ ER Patient Diagnosis \n\n\nOne to Many Relationship", key="er_diagnosis"):
