@@ -980,7 +980,7 @@ if st.session_state['page'] == 'menu':
     """, unsafe_allow_html=True)
     
     st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/er_arch11.drawio.png", 
-            caption="Part 1: Source Database to Analytical Database via NiFi Data Ingestion", 
+            caption="Source Database to Analytical Database via NiFi Data Ingestion", 
             use_column_width=True)
     
     st.markdown("</div>", unsafe_allow_html=True)
