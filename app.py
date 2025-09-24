@@ -1028,7 +1028,7 @@ if st.session_state['page'] == 'menu':
     """, unsafe_allow_html=True)
     
     # Image 1 - Data Flow Architecture (Lengthy)
-    st.markdown("#### 📊 Data Flow Architecture")
+    st.markdown("")
     st.markdown("""
     <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 20px 0;">
     """, unsafe_allow_html=True)
