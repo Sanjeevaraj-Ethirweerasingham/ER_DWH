@@ -290,7 +290,7 @@ if st.session_state['page'] == 'menu':
     st.plotly_chart(fig, use_container_width=True)
 
 
-
+    st.markdown("### One to One Relationship Queries - Visitwise")
     # Third Row: ER Diagnosis
     st.markdown("### 🛤️ Patient Diagnosis")
     col_left, col_center, col_right = st.columns([1, 2, 1])
