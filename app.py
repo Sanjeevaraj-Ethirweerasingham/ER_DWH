@@ -219,12 +219,16 @@ if st.session_state['page'] == 'menu':
 
 
     
+colors = {
+    'Admission': '#ff6b6b',
     'Visual Triage': '#4ecdc4',
     'Main Triage': '#45b7d1',
     'Assignments': '#96ceb4',
     'Discharge': '#feca57',
     'Journey': '#ffff00',
     'ER Patient\nDetails': '#667eea'
+}
+
 
 
 # -------------------------------
