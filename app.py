@@ -276,7 +276,7 @@ if st.session_state['page'] == 'menu':
     
     fig.update_layout(
         title=dict(
-            text="Emergency Room Patient Flow Architecture",
+            text="",
             x=0.5,
             font=dict(size=18, color='#333')
         ),
