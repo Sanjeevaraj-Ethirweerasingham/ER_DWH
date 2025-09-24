@@ -169,7 +169,7 @@ if 'page' not in st.session_state:
 if st.session_state['page'] == 'menu':
         
     # Query Navigation Buttons
-    st.markdown("### One to One Queries")
+    st.markdown("### One to One Relationship Queries - Visitwise")
     st.markdown("### 🔍 ER Admission to Discharge Queries")
     
     # First Row: 5 boxes
