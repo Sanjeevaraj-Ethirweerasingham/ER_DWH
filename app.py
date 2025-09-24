@@ -213,7 +213,7 @@ if st.session_state['page'] == 'menu':
     st.markdown("### 📊 ER Patient Details (One to One Flat table)")
     col_left, col_center, col_right = st.columns([1, 2, 1])
     with col_center:
-        if st.button("📋 **ER Patient Flaat table **", key="er_patient_data"):
+        if st.button("📋 ER Patient Flat table ", key="er_patient_data"):
             st.session_state['page'] = 'er_patient_data'
             st.rerun()
 
@@ -235,6 +235,7 @@ if st.session_state['page'] == 'menu':
         'Main Triage': (3, 2),
         'Assignments': (4, 2),
         'Discharge': (5, 2),
+        'Journey': (6, 2),
         'ER Patient\nDetails': (3, 1)
     }
     
@@ -244,6 +245,7 @@ if st.session_state['page'] == 'menu':
         'Main Triage': '#45b7d1',
         'Assignments': '#96ceb4',
         'Discharge': '#feca57',
+        'Journey': '#ffff00',
         'ER Patient\nDetails': '#667eea'
     }
     
