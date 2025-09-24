@@ -7,36 +7,33 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed")
 
-# Custom CSS for professional red, white, black styling
+# Custom CSS for professional styling
 st.markdown("""
 <style>
     .main-header {
         text-align: center;
         padding: 2rem 0;
-        background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: white;
         margin: -1rem -1rem 2rem -1rem;
         border-radius: 10px;
-        box-shadow: 0 8px 32px rgba(220, 38, 38, 0.3);
     }
     
     .main-header h1 {
         font-size: 2.5rem;
         margin-bottom: 0.5rem;
         font-weight: 700;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
     
     .main-header p {
         font-size: 1.1rem;
-        opacity: 0.95;
+        opacity: 0.9;
         margin: 0;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     }
     
     .nav-button {
-        background: linear-gradient(45deg, #dc2626 0%, #b91c1c 100%);
-        border: 2px solid #ffffff;
+        background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+        border: none;
         color: white;
         padding: 1rem 1.5rem;
         text-align: center;
@@ -54,19 +51,16 @@ st.markdown("""
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-weight: 600;
     }
     
     .nav-button:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 25px rgba(220, 38, 38, 0.4);
-        background: linear-gradient(45deg, #ef4444 0%, #dc2626 100%);
-        border-color: #000000;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
     }
     
     .central-button {
-        background: linear-gradient(45deg, #1f2937 0%, #111827 100%);
-        border: 2px solid #dc2626;
+        background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+        border: none;
         color: white;
         padding: 1.5rem 2rem;
         text-align: center;
@@ -74,7 +68,7 @@ st.markdown("""
         font-weight: bold;
         cursor: pointer;
         border-radius: 15px;
-        box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+        box-shadow: 0 6px 25px rgba(0,0,0,0.2);
         transition: all 0.3s ease;
         width: 100%;
         height: 140px;
@@ -86,8 +80,7 @@ st.markdown("""
     
     .central-button:hover {
         transform: translateY(-3px);
-        box-shadow: 0 8px 30px rgba(220, 38, 38, 0.4);
-        background: linear-gradient(45deg, #374151 0%, #1f2937 100%);
+        box-shadow: 0 8px 30px rgba(0,0,0,0.3);
     }
     
     .query-container {
@@ -96,21 +89,20 @@ st.markdown("""
         border-radius: 15px;
         box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         margin: 2rem 0;
-        border-left: 5px solid #dc2626;
-        border-top: 1px solid #f3f4f6;
+        border-left: 5px solid #667eea;
     }
     
     .query-header {
-        color: #1f2937;
+        color: #333;
         font-size: 1.8rem;
         margin-bottom: 1rem;
         font-weight: 600;
     }
     
     .back-button {
-        background: linear-gradient(45deg, #1f2937, #111827);
+        background: linear-gradient(45deg, #ff6b6b, #ee5a24);
         color: white;
-        border: 2px solid #dc2626;
+        border: none;
         padding: 0.75rem 2rem;
         border-radius: 25px;
         font-size: 1rem;
@@ -122,17 +114,15 @@ st.markdown("""
     
     .back-button:hover {
         transform: translateY(-1px);
-        box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
-        background: linear-gradient(45deg, #374151, #1f2937);
+        box-shadow: 0 4px 15px rgba(255,107,107,0.3);
     }
     
     .process-flow {
-        background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+        background: #f8f9ff;
         padding: 2rem;
         border-radius: 15px;
         margin: 2rem 0;
         box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        border: 1px solid #e5e7eb;
     }
     
     .metric-card {
@@ -142,54 +132,23 @@ st.markdown("""
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         text-align: center;
         margin: 1rem 0;
-        border-left: 4px solid #dc2626;
-        border-top: 1px solid #f3f4f6;
+        border-left: 4px solid #667eea;
     }
     
     .stButton > button {
         width: 100%;
         border-radius: 12px;
-        border: 2px solid #ffffff !important;
-        background: linear-gradient(45deg, #dc2626, #b91c1c) !important;
-        color: white !important;
-        font-weight: 600 !important;
-        padding: 0.75rem !important;
-        transition: all 0.3s ease !important;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
+        border: none;
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        font-weight: 600;
+        padding: 0.75rem;
+        transition: all 0.3s ease;
     }
     
     .stButton > button:hover {
-        transform: translateY(-1px) !important;
-        box-shadow: 0 6px 25px rgba(220, 38, 38, 0.4) !important;
-        background: linear-gradient(45deg, #ef4444, #dc2626) !important;
-        border-color: #000000 !important;
-    }
-    
-    /* Custom accent elements */
-    .accent-line {
-        height: 3px;
-        background: linear-gradient(90deg, #dc2626 0%, #1f2937 50%, #dc2626 100%);
-        margin: 1rem 0;
-        border-radius: 2px;
-    }
-    
-    /* Header improvements */
-    h3 {
-        color: #1f2937 !important;
-        border-bottom: 2px solid #dc2626;
-        padding-bottom: 0.5rem;
-        margin-bottom: 1.5rem !important;
-    }
-    
-    /* Sidebar styling if used */
-    .css-1d391kg {
-        background: linear-gradient(180deg, #1f2937 0%, #111827 100%);
-    }
-    
-    /* Main content area */
-    .main .block-container {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
 </style>
 """, unsafe_allow_html=True)
@@ -201,9 +160,6 @@ st.markdown("""
     <p>Emergency Room Data Queries & DWH Plans</p>
 </div>
 """, unsafe_allow_html=True)
-
-# Accent line
-st.markdown('<div class="accent-line"></div>', unsafe_allow_html=True)
 
 # Initialize session state
 if 'page' not in st.session_state:
@@ -242,6 +198,7 @@ if st.session_state['page'] == 'menu':
         if st.button("🚪\n\nDischarge", key="discharge"):
             st.session_state['page'] = 'discharge'
             st.rerun()
+
 
 
     
