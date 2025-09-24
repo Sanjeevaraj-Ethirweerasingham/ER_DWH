@@ -213,7 +213,7 @@ if st.session_state['page'] == 'menu':
     st.markdown("### 📊 ER Patient Details (One to One Flat table)")
     col_left, col_center, col_right = st.columns([1, 2, 1])
     with col_center:
-        if st.button("📋 **ER Patient Flaat table **, key="er_patient_data"):
+        if st.button("📋 **ER Patient Flaat table **", key="er_patient_data"):
             st.session_state['page'] = 'er_patient_data'
             st.rerun()
 
