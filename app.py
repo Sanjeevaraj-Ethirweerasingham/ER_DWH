@@ -254,10 +254,10 @@ if st.session_state['page'] == 'menu':
         fig.add_trace(go.Scatter(
             x=[x], y=[y],
             mode='markers+text',
-            marker=dict(size=60, color=colors[node], opacity=0.8),
+            marker=dict(size=80, color=colors[node], opacity=0.8),
             text=node,
             textposition='middle center',
-            textfont=dict(color='white', size=10, family='Arial Black'),
+            textfont=dict(color='white', size=15, family='Arial Black'),
             showlegend=False,
             hovertemplate=f'<b>{node}</b><extra></extra>'
         ))
