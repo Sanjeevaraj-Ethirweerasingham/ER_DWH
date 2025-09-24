@@ -280,7 +280,7 @@ if st.session_state['page'] == 'menu':
             x=0.5,
             font=dict(size=18, color='#333')
         ),
-        xaxis=dict(showgrid=False, zeroline=False, showticklabels=False, range=[0, 6]),
+        xaxis=dict(showgrid=False, zeroline=False, showticklabels=False, range=[0, 7]),
         yaxis=dict(showgrid=False, zeroline=False, showticklabels=False, range=[0.5, 2.5]),
         plot_bgcolor='rgba(0,0,0,0)',
         paper_bgcolor='rgba(0,0,0,0)',
