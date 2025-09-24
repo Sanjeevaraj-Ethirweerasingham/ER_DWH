@@ -218,12 +218,12 @@ if st.session_state['page'] == 'menu':
             st.rerun()
 
 
-    # Process Flow Diagram
-    st.markdown("""
-    <div class="process-flow">
-        <h3 style="text-align: center; color: #333; margin-bottom: 2rem;">🔄 ER Patient Flow</h3>
-    </div>
-    """, unsafe_allow_html=True)
+    # # Process Flow Diagram
+    # st.markdown("""
+    # <div class="process-flow">
+    #     <h3 style="text-align: center; color: #333; margin-bottom: 2rem;">🔄 ER Patient Flow</h3>
+    # </div>
+    # """, unsafe_allow_html=True)
     
     # Create process flow using Plotly
     fig = go.Figure()
