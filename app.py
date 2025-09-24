@@ -218,76 +218,64 @@ if st.session_state['page'] == 'menu':
             st.rerun()
 
 
-    # Process Flow Diagram
-    st.markdown("""
-    <div class="process-flow">
-        <h3 style="text-align: center; color: #333; margin-bottom: 2rem;">🔄 ER Patient Flow</h3>
-    </div>
-    """, unsafe_allow_html=True)
     
-    # Create process flow using Plotly
-    fig = go.Figure()
-    
-    # Define positions for nodes
-    nodes = {
-        'Admission': (1, 2),
-        'Visual Triage': (2, 2),
-        'Main Triage': (3, 2),
-        'Assignments': (4, 2),
-        'Discharge': (5, 2),
-        'Journey': (6, 2),
-        'ER Patient\nDetails': (3, 1)
-    }
-    
-    colors = {
-        'Admission': '#ff6b6b',
-        'Visual Triage': '#4ecdc4',
-        'Main Triage': '#45b7d1',
-        'Assignments': '#96ceb4',
-        'Discharge': '#feca57',
-        'Journey': '#ffff00',
-        'ER Patient\nDetails': '#667eea'
-    }
-    
-    # Add nodes
-    for node, (x, y) in nodes.items():
+    'Visual Triage': '#4ecdc4',
+    'Main Triage': '#45b7d1',
+    'Assignments': '#96ceb4',
+    'Discharge': '#feca57',
+    'Journey': '#ffff00',
+    'ER Patient\nDetails': '#667eea'
+}
+
+# -------------------------------
+# Section 3: Build Process Flow Figure
+# -------------------------------
+fig = go.Figure()
+
+# Add nodes (bubbles with text)
+for node, (x, y) in nodes.items():
+    fig.add_trace(go.Scatter(
+        x=[x], y=[y],
+        mode='markers+text',
+        marker=dict(size=80, color=colors[node], opacity=0.8),
+        text=node,
+        textposition='middle center',
+        textfont=dict(color='white', size=15, family='Arial Black'),
+        showlegend=False,
+        hovertemplate=f'<b>{node}</b><extra></extra>'
+    ))
+
+# Add connecting arrows to central node ("ER Patient Details")
+for node, (x, y) in nodes.items():
+    if node != 'ER Patient\nDetails':
         fig.add_trace(go.Scatter(
-            x=[x], y=[y],
-            mode='markers+text',
-            marker=dict(size=80, color=colors[node], opacity=0.8),
-            text=node,
-            textposition='middle center',
-            textfont=dict(color='white', size=15, family='Arial Black'),
+            x=[x, 3], y=[y, 1],   # All connect to ER Patient Details
+            mode='lines',
+            line=dict(color='rgba(102, 126, 234, 0.6)', width=3),
             showlegend=False,
-            hovertemplate=f'<b>{node}</b><extra></extra>'
+            hoverinfo='skip'
         ))
 
-    
-    # Add arrows to central hub
-    for node, (x, y) in nodes.items():
-        if node != 'ER Patient\nData Hub':
-            fig.add_trace(go.Scatter(
-                x=[x, 3], y=[y, 1],
-                mode='lines',
-                line=dict(color='rgba(102, 126, 234, 0.6)', width=3),
-                showlegend=False,
-                hoverinfo='skip'
-            ))
-    
-    fig.update_layout(
-        title=dict(
-            text="Emergency Room Patient Flow Architecture",
-            x=0.5,
-            font=dict(size=18, color='#333')
-        ),
-        xaxis=dict(showgrid=False, zeroline=False, showticklabels=False, range=[0, 7]),
-        yaxis=dict(showgrid=False, zeroline=False, showticklabels=False, range=[0.5, 2.5]),
-        plot_bgcolor='rgba(0,0,0,0)',
-        paper_bgcolor='rgba(0,0,0,0)',
-        height=400
-    )
-    
-    st.plotly_chart(fig, use_container_width=True)
+# -------------------------------
+# Section 4: Layout Settings
+# -------------------------------
+fig.update_layout(
+    title=dict(
+        text="Emergency Room Patient Flow Architecture",
+        x=0.5,
+        font=dict(size=18, color='#333')
+    ),
+    xaxis=dict(showgrid=False, zeroline=False, showticklabels=False, range=[0, 7]),
+    yaxis=dict(showgrid=False, zeroline=False, showticklabels=False, range=[0.5, 2.5]),
+    plot_bgcolor='rgba(0,0,0,0)',
+    paper_bgcolor='rgba(0,0,0,0)',
+    height=400
+)
+
+# -------------------------------
+# Section 5: Render Chart in Streamlit
+# -------------------------------
+st.plotly_chart(fig, use_container_width=True)
 
 
 
