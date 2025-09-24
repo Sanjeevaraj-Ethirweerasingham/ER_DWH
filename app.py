@@ -181,48 +181,7 @@ if 'page' not in st.session_state:
 
 # Navigation Menu
 if st.session_state['page'] == 'menu':
-    
-    # # Overview metrics (sample data)
-    # col1, col2, col3, col4 = st.columns(4)
-    
-    # with col1:
-    #     st.markdown("""
-    #     <div class="metric-card">
-    #         <h3 style="color: #667eea; margin: 0;">Active Patients</h3>
-    #         <h2 style="margin: 0.5rem 0; color: #333;">247</h2>
-    #         <p style="margin: 0; color: #666;">Currently in ER</p>
-    #     </div>
-    #     """, unsafe_allow_html=True)
-    
-    # with col2:
-    #     st.markdown("""
-    #     <div class="metric-card">
-    #         <h3 style="color: #f093fb; margin: 0;">Avg Wait Time</h3>
-    #         <h2 style="margin: 0.5rem 0; color: #333;">23 min</h2>
-    #         <p style="margin: 0; color: #666;">Last 24 hours</p>
-    #     </div>
-    #     """, unsafe_allow_html=True)
-    
-    # with col3:
-    #     st.markdown("""
-    #     <div class="metric-card">
-    #         <h3 style="color: #4facfe; margin: 0;">Discharges Today</h3>
-    #         <h2 style="margin: 0.5rem 0; color: #333;">89</h2>
-    #         <p style="margin: 0; color: #666;">As of now</p>
-    #     </div>
-    #     """, unsafe_allow_html=True)
-    
-    # with col4:
-    #     st.markdown("""
-    #     <div class="metric-card">
-    #         <h3 style="color: #ff6b6b; margin: 0;">Critical Cases</h3>
-    #         <h2 style="margin: 0.5rem 0; color: #333;">12</h2>
-    #         <p style="margin: 0; color: #666;">Require attention</p>
-    #     </div>
-    #     """, unsafe_allow_html=True)
-    
-    # st.markdown("---")
-    
+        
     # Query Navigation Buttons
     st.markdown("### 🔍 ER Patient Data Queries")
     
