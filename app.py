@@ -292,51 +292,51 @@ if st.session_state['page'] == 'menu':
 
     st.markdown("### One to Many Relationship Queries - Visitwise")
     # Third Row: ER Diagnosis
-    st.markdown("### 🛤️ Patient Diagnosis")
+    st.markdown("### 🩺 Patient Diagnosis")
     col_left, col_center, col_right = st.columns([1, 2, 1])
     with col_center:
-        if st.button("🛤️ ER Patient Diagnosis", key="er_diagnosis"):
+        if st.button(" ER Patient Diagnosis", key="er_diagnosis"):
             st.session_state['page'] = 'er_diagnosis'
             st.rerun()
     
     # Fourth Row: ER Diagnosis
-    st.markdown("### 🛤️ Patient Medications")
+    st.markdown("### 💉 Patient Medications")
     col_left, col_center, col_right = st.columns([1, 2, 1])
     with col_center:
-        if st.button("🛤️ ER Patient Medications", key="er_medications"):
+        if st.button(" ER Patient Medications", key="er_medications"):
             st.session_state['page'] = 'er_medications'
             st.rerun()
 
     # Fifth Row: ER Procedures
-    st.markdown("### 🛤️ Patient Procedures")
+    st.markdown("### 📋 Patient Procedures")
     col_left, col_center, col_right = st.columns([1, 2, 1])
     with col_center:
-        if st.button("🛤️ ER Patient Procedures", key="er_procedures"):
+        if st.button(" ER Patient Procedures", key="er_procedures"):
             st.session_state['page'] = 'er_procedures'
             st.rerun()
 
     # Sixth Row: ER Lab Details
-    st.markdown("### 🛤️ ER Patient Lab Details")
+    st.markdown("### 🧪 ER Patient Lab Details")
     col_left, col_center, col_right = st.columns([1, 2, 1])
     with col_center:
-        if st.button("🛤️ ER Patient Lab Details", key="er_lab_details"):
+        if st.button(" ER Patient Lab Details", key="er_lab_details"):
             st.session_state['page'] = 'er_lab_details'
             st.rerun()
 
     # Seventh Row: ER Patient Master Data
     st.markdown("### Slowly Changing Dimensions")
-    st.markdown("### 🛤️ ER Patient Master Data")
+    st.markdown("### 👤 Patient Master Data")
     col_left, col_center, col_right = st.columns([1, 2, 1])
     with col_center:
-        if st.button("🛤️ ER Patient Master Data", key="er_patient_master"):
+        if st.button(" ER Patient Master Data", key="er_patient_master"):
             st.session_state['page'] = 'er_patient_master'
             st.rerun()
 
     # Eighth Row: ER Employee Master Data
-    st.markdown("### 🛤️ ER Employee Master Data")
+    st.markdown("### 🧑‍⚕️ Employee Master Data")
     col_left, col_center, col_right = st.columns([1, 2, 1])
     with col_center:
-        if st.button("🛤️ ER Employee Master Data", key="er_employee_master"):
+        if st.button(" ER Employee Master Data", key="er_employee_master"):
             st.session_state['page'] = 'er_employee_master'
             st.rerun()
 
