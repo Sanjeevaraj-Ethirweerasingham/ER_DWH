@@ -1034,7 +1034,7 @@ if st.session_state['page'] == 'menu':
     """, unsafe_allow_html=True)
     
     st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/er_arch11.drawio.png", 
-            caption="Data Flow Diagram - Complete ER Data Architecture", 
+            caption="Part 1: Source Database to Analytical Database via NiFi Data Ingestion", 
             use_column_width=True)
     
     st.markdown("</div>", unsafe_allow_html=True)
@@ -1045,13 +1045,13 @@ if st.session_state['page'] == 'menu':
     st.markdown("<br>", unsafe_allow_html=True)
     
     # Image 2 - ETL Process Flow (Lengthy)
-    st.markdown("#### 🔄 ETL Process Flow")
+    st.markdown("####")
     st.markdown("""
     <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 20px 0;">
     """, unsafe_allow_html=True)
     
     st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/err_archii_2.drawio.png", 
-            caption="ETL Process Architecture - Data Transformation Pipeline", 
+            caption="Staging Layer and Data Convergence Strategy", 
             use_column_width=True)
     
     st.markdown("</div>", unsafe_allow_html=True)
@@ -1062,16 +1062,16 @@ if st.session_state['page'] == 'menu':
     st.markdown("<br>", unsafe_allow_html=True)
     
     # Image 3 - Data Warehouse Schema (Regular)
-    st.markdown("#### 🏢 Data Warehouse Schema")
+    st.markdown("")
     st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/err_archi_3drawio.png", 
-            caption="DWH Star Schema - Dimensional Model Design", 
+            caption="Citus Distribution and Business Intelligence", 
             use_column_width=True)
     
     # Regular space
     st.markdown("---")
     
     # Image 4 - Analytics Architecture (Regular)
-    st.markdown("#### 📈 Analytics Architecture")
+    st.markdown("")
     st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/er_archi_4_.drawio.png", 
-            caption="Analytics Layer Architecture - Reporting and Visualization", 
+            caption="Complete Architecture", 
             use_column_width=True)
