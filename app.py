@@ -156,8 +156,8 @@ st.markdown("""
 # Main header
 st.markdown("""
 <div class="main-header">
-    <h1>🏥 ER DWH</h1>
-    <p>Emergency Room Data Queries & DWH Plans</p>
+    <h1>🏥 EMERGENCY ROOM DATA WAREHOUSE</h1>
+    <p>Data Queries & DWH Architecture Plans</p>
 </div>
 """, unsafe_allow_html=True)
 
