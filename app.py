@@ -201,16 +201,16 @@ if st.session_state['page'] == 'menu':
             st.rerun()
 
     # Second Row: ER Journey
-    st.markdown("### 🛤️ Patient Journey")
+    st.markdown("### ➡️🩺➡️ Patient Journey")
     col_left, col_center, col_right = st.columns([1, 2, 1])
     with col_center:
-        if st.button("🛤️ ER Patient Journey", key="er_journey"):
+        if st.button(" ER Patient Journey", key="er_journey"):
             st.session_state['page'] = 'er_journey'
             st.rerun()
 
     
     # Central Button
-    st.markdown("### 📊 ER Patient Details (One to One Flat table)")
+    st.markdown("### 🧾 ER Patient Details (One to One Flat table)")
     col_left, col_center, col_right = st.columns([1, 2, 1])
     with col_center:
         if st.button("📋 ER Patient Flat table ", key="er_patient_data"):
