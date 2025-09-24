@@ -284,7 +284,7 @@ st.plotly_chart(fig, use_container_width=True)
 
 
     # Third Row: ER Diagnosis
-    st.markdown("### 🛤️ Patient Diagnosis")
+st.markdown("### 🛤️ Patient Diagnosis")
     col_left, col_center, col_right = st.columns([1, 2, 1])
     with col_center:
         if st.button("🛤️ ER Patient Diagnosis \n\n\nOne to Many Relationship", key="er_diagnosis"):
