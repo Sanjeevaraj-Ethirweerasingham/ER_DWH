@@ -972,7 +972,7 @@ if st.session_state['page'] == 'menu':
     st.markdown("---")
     st.markdown("""
     <div class="main-header" style="margin-top: 3rem;">
-        <h2>🏗️ ETL Architecture Diagrams</h2>
+        <h2>📥⚙️📤 ETL Architecture Diagrams</h2>
         <p>Data Warehouse Architecture and Flow Diagrams</p>
     </div>
     """, unsafe_allow_html=True)
