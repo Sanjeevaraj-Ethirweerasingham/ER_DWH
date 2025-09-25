@@ -1033,3 +1033,100 @@ if st.session_state['page'] == 'menu':
         if st.button(" ER Patient Details Flat table", key="er_flat"):
             st.session_state['page'] = 'er_flat'
             st.rerun()
+
+# Page routing
+if st.session_state['page'] == 'er_flat':
+    render_query_page(
+        "ER One to One Flat Table",
+        "🏥",
+        """-- ========================
+-- Merge ER Admission changes
+-- ========================
+INSERT INTO er_dwh.er_admission_discharge_flat (
+    visit_id,
+    hospital_id,
+    patient_id,
+    arrived_time,
+    latest_action_status,
+    latest_admission_status,
+    is_nursing_services,
+    tenant_id,
+    clinic_group_id,
+    clinic_id,
+    is_active,
+    er_admission_id,
+    admission_modifiedon,
+    admission_last_updated
+)
+SELECT
+    a.visit_id,
+    a.hospital_id,
+    a.patient_id,
+    a.arrived_time,
+    a.latest_action_status,
+    a.latest_admission_status,
+    a.is_nursing_services,
+    a.tenant_id,
+    a.clinic_group_id,
+    a.clinic_id,
+    a.is_active,
+    a.er_admission_id,
+    a.modifiedon,
+    now()
+FROM er_dwh.er_admissions a
+WHERE a.modifiedon > COALESCE(
+    (SELECT max(admission_modifiedon) FROM er_dwh.er_admission_discharge_flat), '1900-01-01'
+)
+ON CONFLICT (visit_id) DO UPDATE
+SET hospital_id             = EXCLUDED.hospital_id,
+    patient_id              = EXCLUDED.patient_id,
+    arrived_time            = EXCLUDED.arrived_time,
+    latest_action_status    = EXCLUDED.latest_action_status,
+    latest_admission_status = EXCLUDED.latest_admission_status,
+    is_nursing_services     = EXCLUDED.is_nursing_services,
+    tenant_id               = EXCLUDED.tenant_id,
+    clinic_group_id         = EXCLUDED.clinic_group_id,
+    clinic_id               = EXCLUDED.clinic_id,
+    is_active               = EXCLUDED.is_active,
+    er_admission_id         = EXCLUDED.er_admission_id,
+    admission_modifiedon     = EXCLUDED.admission_modifiedon,
+    admission_last_updated           = now();
+
+
+-- ========================
+-- Merge ER Discharge changes
+-- ========================
+INSERT INTO er_dwh.er_admission_discharge_flat (
+    visit_id,
+    eraction,
+    dischargedtime,
+    isdeceased,
+    istransferedtomorgue,
+    transferedtomorguedate,
+    discharge_modifiedon,
+    discharge_last_updated
+)
+SELECT
+    d.visit_id,
+    d.eraction,
+    d.dischargedtime,
+    d.isdeceased,
+    d.istransferedtomorgue,
+    d.transferedtomorguedate,
+    d.modifiedon,
+    now()
+FROM er_dwh.er_discharge d
+WHERE d.modifiedon > COALESCE(
+    (SELECT max(discharge_modifiedon) FROM er_dwh.er_admission_discharge_flat), '1900-01-01'
+)
+ON CONFLICT (visit_id) DO UPDATE
+SET eraction              = EXCLUDED.eraction,
+    dischargedtime        = EXCLUDED.dischargedtime,
+    isdeceased            = EXCLUDED.isdeceased,
+    istransferedtomorgue  = EXCLUDED.istransferedtomorgue,
+    transferedtomorguedate= EXCLUDED.transferedtomorguedate,
+    discharge_modifiedon  = EXCLUDED.discharge_modifiedon,
+    discharge_last_updated         = now()""",
+        "Update Only the relevant Columns from the events"
+    )
+
