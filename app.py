@@ -1022,7 +1022,7 @@ if st.session_state['page'] == 'menu':
     
     # Image 4 - Analytics Architecture (Regular)
     st.markdown("")
-    st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/er_archi_4_.drawio.png", 
+    st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/archi444.drawio.png", 
             caption="Complete Architecture", 
             use_column_width=True)
 
