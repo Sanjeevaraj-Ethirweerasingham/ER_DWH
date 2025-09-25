@@ -324,7 +324,7 @@ if st.session_state['page'] == 'menu':
             st.rerun()
 
     # Seventh Row: ER Patient Master Data
-    st.markdown("### Slowly Changing Dimensions")
+    st.markdown("### Dimensions")
     st.markdown("### 👤 Patient Master Data")
     col_left, col_center, col_right = st.columns([1, 2, 1])
     with col_center:
@@ -336,7 +336,7 @@ if st.session_state['page'] == 'menu':
     st.markdown("### 🧑‍⚕️ Employee Master Data")
     col_left, col_center, col_right = st.columns([1, 2, 1])
     with col_center:
-        if st.button(" ER Employee Master Data", key="er_employee_master"):
+        if st.button(" ER Employee Master Data (SCD)", key="er_employee_master"):
             st.session_state['page'] = 'er_employee_master'
             st.rerun()
 
@@ -1025,3 +1025,11 @@ if st.session_state['page'] == 'menu':
     st.image("https://raw.githubusercontent.com/Sanjeevaraj-Ethirweerasingham/ER_DWH/main/er_archi_4_.drawio.png", 
             caption="Complete Architecture", 
             use_column_width=True)
+
+    # last Row: ER Update Queries
+    st.markdown("### ➡️🩺➡️ One to One Table Update Queries")
+    col_left, col_center, col_right = st.columns([1, 2, 1])
+    with col_center:
+        if st.button(" ER Patient Details Flat table", key="er_flat"):
+            st.session_state['page'] = 'er_flat'
+            st.rerun()
